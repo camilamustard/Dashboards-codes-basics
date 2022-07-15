@@ -1,0 +1,45 @@
+from distutils.log import debug
+from ssl import HAS_TLSv1_2
+from dash import Dash, html, dcc
+from dash_html_components import Div,H1,P,H2,H3,Header, Footer 
+from dash_core_components import Graph
+from dash import dcc
+from numpy import True_
+import pandas as pd
+#pip install= dash, pandas, openpyxl, numpy, matplotlib,-U scikit-learn,plotly
+# Run this app with `python app.py` and
+# visit http://127.0.0.1:8050/ in your web browser.
+
+external_stylesheets=['https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css']
+
+app = Dash(__name__,external_stylesheets=external_stylesheets)
+
+app.layout= Div(
+    children= [
+        Header('Bayer crop science'),
+        H1('Gliphosate project dashboard'),
+        P('Bem-vindo ao dashboard'), 
+        H3('Gráfico 1'),
+        Graph(
+            figure={
+                'data':[
+                    {
+                        'x':[1,2,3,4],
+                        'type':'box',
+                    
+                    }
+                ]
+            }
+        ),
+        ]) 
+
+    
+# assume you have a "long-form" data frame
+# see https://plotly.com/python/px-arguments/ for more options
+app.run_server(debug=True)
+
+
+
+# assume you have a "long-form" data frame
+
+# see https://plotly.com/python/px-arguments/ for more options
