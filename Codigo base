@@ -8,6 +8,7 @@ from numpy import True_
 import pandas as pd
 #pip install= dash, pandas, openpyxl, numpy, matplotlib,-U scikit-learn,plotly
 # Run this app with `python app.py` and
+#create a folder called assets and insert a document called style.css to personalize it
 # visit http://127.0.0.1:8050/ in your web browser.
 
 external_stylesheets=['https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css']
